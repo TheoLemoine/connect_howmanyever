@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect Howmanyever</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header> 
+        <div class="displays"></div>
+        <div>
+            <button class="restart"> Restart the game </button>
+            <button class="config"> Config </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="config">
+            <form>
+                <div class="main-config">
+                    
+                    <label for="combo">Connect : 
+                        <input type="number" value="4" id="combo">
+                    </label>
+                    
+                    <label for="rows">Rows :
+                        <input type="number" value="6" id="rows">
+                    </label>
+                    
+                    <label for="cols">Columns :
+                        <input type="number" value="7" id="cols">
+                    </label>
+                </div>
+                <div class="players">
+                    <div class="one-player hidden">
+                        <select name="type" class="player-type">
+                            <option value="randomAI">random AI</option>
+                            <option value="mousePlayer">mouse player</option>
+                            <option value="promptPlayer">prompt player</option>
+                            <option value="dumbAI">dumb AI</option>
+                        </select>
+                        <input type="color" name="player-color" class="player-color">
+                        <button class="removePlayer"> - </button>
+                    </div>
+                    <!-- default configs -->
+                    <div class="one-player">
+                        <select name="type" class="player-type" selected="dumbAI">
+                            <option value="randomAI">random AI</option>
+                            <option value="mousePlayer">mouse player</option>
+                            <option value="promptPlayer">prompt player</option>
+                            <option value="dumbAI" selected>dumb AI</option>
+                        </select>
+                        <input type="color" name="player-color" class="player-color" value="#ff8040">
+                        <button class="removePlayer"> - </button>
+                    </div>
+                    <div class="one-player">
+                        <select name="type" class="player-type" selected="dumbAI">
+                            <option value="randomAI">random AI</option>
+                            <option value="mousePlayer" selected="randomAI">mouse player</option>
+                            <option value="promptPlayer">prompt player</option>
+                            <option value="dumbAI" selected>dumb AI</option>
+                        </select>
+                        <input type="color" name="player-color" class="player-color" value="#0D6493">
+                        <button class="removePlayer"> - </button>
+                    </div>
+                </div>
+                <button class="plusPlayer"> + </button>
+            </form>
+        </section>
+        <section id="C4">
+        </section>
+    </main>
+
+    <script src="ConnectFour.js"></script>
+</body>
+</html>
